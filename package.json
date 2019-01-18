@@ -22,6 +22,8 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0"
+    "@babel/polyfill": "^7.0.0",
+    "handlebars": "^4.0.12",
+    "handlebars-loader": "^1.7.1"
   }
 }

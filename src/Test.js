@@ -1,3 +1,5 @@
+import hello from './templates/hello.handlebars'
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 for (const number of numbers) {
@@ -15,3 +17,11 @@ iterable1[Symbol.iterator] = function* () {
 }
 
 console.log([...iterable1])
+
+console.log(hello({
+  firstName: 'Test',
+  lastName: 'Tester',
+  age: 25,
+  job: 'dev',
+  hobby: 'tennis'
+}))
