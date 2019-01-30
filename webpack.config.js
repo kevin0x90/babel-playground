@@ -6,10 +6,16 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  resolveLoader: {
+    fallback: [
+      path.resolve(__dirname, 'loaders'),
+      path.join(process.cwd(), 'node_modules')
+    ]
+  },
   module: {
     rules: [
       {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.handlebars$/, exclude: /node_modules/, loader: "handlebars-loader" } 
+      { test: /\.mustache$/, exclude: /node_modules/, loader: "hogan-loader" }
     ]
   }
 }

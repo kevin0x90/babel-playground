@@ -18,6 +18,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",
     "eslint": "^5.9.0",
+    "hogan.js": "^3.0.2",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2"
   },
