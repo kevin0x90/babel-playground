@@ -1,4 +1,4 @@
-import hello from './templates/hello.handlebars'
+import hello from './templates/hello.mustache'
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -8,17 +8,9 @@ for (const number of numbers) {
 
 numbers.forEach(num => console.log(num))
 
-const iterable1 = new Object()
+console.log(hello)
 
-iterable1[Symbol.iterator] = function* () {
-  yield 1
-  yield 2
-  yield 3
-}
-
-console.log([...iterable1])
-
-console.log(hello({
+console.log(hello.render({
   firstName: 'Test',
   lastName: 'Tester',
   age: 25,
