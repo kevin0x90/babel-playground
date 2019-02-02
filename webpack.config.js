@@ -12,7 +12,12 @@ module.exports = {
   module: {
     rules: [
       {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.mustache$/, exclude: /node_modules/, loader: "hogan-loader" }
+      { test: /\.mustache$/, exclude: /node_modules/, loader: "hogan-loader",
+        options: {
+          partialsDir: path.resolve(__dirname, 'src/templates'),
+          fileExtension: '.mustache'
+        }
+      }
     ]
   }
 }

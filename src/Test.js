@@ -8,8 +8,6 @@ for (const number of numbers) {
 
 numbers.forEach(num => console.log(num))
 
-console.log(hello)
-
 console.log(hello.render({
   firstName: 'Test',
   lastName: 'Tester',
